@@ -77,7 +77,7 @@ export default class HeaderSearch extends Component {
         if (searchMode && this.inputRef) {
           this.inputRef.focus();
         }
-      },
+      }
     );
   };
 
@@ -94,7 +94,13 @@ export default class HeaderSearch extends Component {
   };
 
   render() {
-    const { className, defaultValue, placeholder, open, ...restProps } = this.props;
+    const {
+      className,
+      defaultValue,
+      placeholder,
+      open,
+      ...restProps
+    } = this.props;
     const { searchMode, value } = this.state;
     delete restProps.defaultOpen; // for rc-select not affected
 

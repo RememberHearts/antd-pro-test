@@ -1,8 +1,15 @@
 import { reloadAuthorized } from './Authorized'; // use localStorage to store the authority info, which might be sent from server in actual project.
 
+const {
+  ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION,
+  REACT_APP_ENV,
+} = process.env;
+
 export function getAuthority(str) {
   const authorityString =
-    typeof str === 'undefined' && localStorage ? localStorage.getItem('antd-pro-authority') : str; // authorityString could be admin, "admin", ["admin"]
+    typeof str === 'undefined' && localStorage
+      ? localStorage.getItem('antd-pro-authority')
+      : str; // authorityString could be admin, "admin", ["admin"]
 
   let authority;
 
@@ -19,7 +26,10 @@ export function getAuthority(str) {
   } // preview.pro.ant.design only do not use in your production.
   // preview.pro.ant.design 专用环境变量，请不要在你的项目中使用它。
 
-  if (!authority && ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION === 'site') {
+  if (
+    !authority &&
+    ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION === 'site'
+  ) {
     return ['admin'];
   }
 

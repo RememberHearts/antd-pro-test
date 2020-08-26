@@ -1,4 +1,3 @@
-/* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-underscore-dangle */
 /* globals workbox */
@@ -39,13 +38,16 @@ workbox.routing.registerRoute(/\/api\//, workbox.strategies.networkFirst());
  */
 workbox.routing.registerRoute(
   /^https:\/\/gw.alipayobjects.com\//,
-  workbox.strategies.networkFirst(),
+  workbox.strategies.networkFirst()
 );
 workbox.routing.registerRoute(
   /^https:\/\/cdnjs.cloudflare.com\//,
-  workbox.strategies.networkFirst(),
+  workbox.strategies.networkFirst()
 );
-workbox.routing.registerRoute(/\/color.less/, workbox.strategies.networkFirst());
+workbox.routing.registerRoute(
+  /\/color.less/,
+  workbox.strategies.networkFirst()
+);
 
 /**
  * Response to client after skipping waiting with MessageChannel
@@ -63,8 +65,8 @@ addEventListener('message', event => {
         error =>
           replyPort.postMessage({
             error,
-          }),
-      ),
+          })
+      )
     );
   }
 });

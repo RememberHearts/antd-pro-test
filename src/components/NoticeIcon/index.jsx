@@ -17,7 +17,8 @@ export default class NoticeIcon extends Component {
     onViewMore: () => {},
     loading: false,
     clearClose: false,
-    emptyImage: 'https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg',
+    emptyImage:
+      'https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg',
   };
 
   state = {
@@ -69,7 +70,14 @@ export default class NoticeIcon extends Component {
         return;
       }
 
-      const { list, title, count, tabKey, showClear, showViewMore } = child.props;
+      const {
+        list,
+        title,
+        count,
+        tabKey,
+        showClear,
+        showViewMore,
+      } = child.props;
       const len = list && list.length ? list.length : 0;
       const msgCount = count || count === 0 ? count : len;
       const tabTitle = msgCount > 0 ? `${title} (${msgCount})` : title;
@@ -87,7 +95,7 @@ export default class NoticeIcon extends Component {
             title={title}
             {...child.props}
           />
-        </TabPane>,
+        </TabPane>
       );
     });
     return (

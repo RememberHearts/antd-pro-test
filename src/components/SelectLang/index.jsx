@@ -1,5 +1,5 @@
 import { Icon, Menu } from 'antd';
-import { formatMessage, getLocale, setLocale } from 'umi-plugin-react/locale';
+import { formatMessage, getLocale, setLocale } from 'umi';
 import React from 'react';
 import classNames from 'classnames';
 import HeaderDropdown from '../HeaderDropdown';
@@ -25,7 +25,11 @@ const SelectLang = props => {
     'pt-BR': '🇧🇷',
   };
   const langMenu = (
-    <Menu className={styles.menu} selectedKeys={[selectedLang]} onClick={changeLang}>
+    <Menu
+      className={styles.menu}
+      selectedKeys={[selectedLang]}
+      onClick={changeLang}
+    >
       {locales.map(locale => (
         <Menu.Item key={locale}>
           <span role="img" aria-label={languageLabels[locale]}>

@@ -2,8 +2,6 @@ import slash from 'slash2';
 import defaultSettings from './defaultSettings'; // https://umijs.org/config/
 import routes from './router.config';
 import { defineConfig, utils } from 'umi';
-
-import themePluginConfig from './themePluginConfig';
 import proxy from './proxy';
 import webpackPlugin from './plugin.config';
 
@@ -15,26 +13,16 @@ const UMI_PLUGIN_REACT = {
   antd: {},
   dva: {
     hmr: true,
+    skipModelValidate: true,
   },
   locale: {
-    // default false
-    enable: true,
-    // default zh-CN
     default: 'zh-CN',
-    // default true, when it is true, will use `navigator.language` overwrite default
     baseNavigator: true,
   },
   dynamicImport: {
-    loading: './components/PageLoading/index',
+    loading: '@/components/PageLoading/index',
   },
-  pwa: pwa
-    ? {
-      workboxPluginMode: 'InjectManifest',
-      workboxOptions: {
-        importWorkboxFrom: 'local',
-      },
-    }
-    : false, // default close dll, because issue https://github.com/ant-design/ant-design-pro/issues/4665
+  pwa: false,
 };
 
 const UMI_PLUGIN_PRO_BLOCK = {

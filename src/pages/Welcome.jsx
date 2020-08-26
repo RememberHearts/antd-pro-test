@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { FormattedMessage } from 'umi-plugin-react/locale';
+import { FormattedMessage } from 'umi';
 import { Card, Typography, Input, Alert } from 'antd';
 import { Form } from '@ant-design/compatible';
 import styles from './Welcome.less';

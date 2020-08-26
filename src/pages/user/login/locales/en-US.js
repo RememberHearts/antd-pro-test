@@ -3,7 +3,8 @@ export default {
   'user-login.login.password': 'password',
   'user-login.login.message-invalid-credentials':
     'Invalid username or password（admin/ant.design）',
-  'user-login.login.message-invalid-verification-code': 'Invalid verification code',
+  'user-login.login.message-invalid-verification-code':
+    'Invalid verification code',
   'user-login.login.tab-login-credentials': 'Credentials',
   'user-login.login.tab-login-mobile': 'Mobile number',
   'user-login.login.remember-me': 'Remember me',
@@ -32,7 +33,8 @@ export default {
   'user-login.confirm-password.required': 'Please confirm your password!',
   'user-login.phone-number.required': 'Please enter your phone number!',
   'user-login.phone-number.wrong-format': 'Malformed phone number!',
-  'user-login.verification-code.required': 'Please enter the verification code!',
+  'user-login.verification-code.required':
+    'Please enter the verification code!',
   'user-login.title.required': 'Please enter a title',
   'user-login.date.required': 'Please select the start and end date',
   'user-login.goal.required': 'Please enter a description of the goal',

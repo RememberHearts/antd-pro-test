@@ -12,7 +12,10 @@ function formatter(routes, parentPath = '') {
     }
     if (item.routes) {
       result = result.concat(
-        formatter(item.routes, item.path ? `${fixedParentPath}/${item.path}` : parentPath),
+        formatter(
+          item.routes,
+          item.path ? `${fixedParentPath}/${item.path}` : parentPath
+        )
       );
     }
   });
@@ -33,7 +36,7 @@ describe('Ant Design Pro E2E test', () => {
       timeout: 2000,
     });
     const haveFooter = await page.evaluate(
-      () => document.getElementsByTagName('footer').length > 0,
+      () => document.getElementsByTagName('footer').length > 0
     );
     expect(haveFooter).toBeTruthy();
   };

@@ -1,5 +1,5 @@
 import { stringify } from 'querystring';
-import { router } from 'umi';
+import { history } from 'umi';
 import { fakeAccountLogin, getFakeCaptcha } from '@/services/login';
 import { setAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
@@ -37,7 +37,7 @@ const Model = {
           }
         }
 
-        router.replace(redirect || '/');
+        history.replace(redirect || '/');
       }
     },
 
@@ -49,7 +49,7 @@ const Model = {
       const { redirect } = getPageQuery(); // Note: There may be security issues, please note
 
       if (window.location.pathname !== '/user/login' && !redirect) {
-        router.replace({
+        history.replace({
           pathname: '/user/login',
           search: stringify({
             redirect: window.location.href,

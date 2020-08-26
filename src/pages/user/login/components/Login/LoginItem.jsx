@@ -49,7 +49,12 @@ class WrapFormItem extends Component {
     }
   };
 
-  getFormItemOptions = ({ onChange, defaultValue, customProps = {}, rules }) => {
+  getFormItemOptions = ({
+    onChange,
+    defaultValue,
+    customProps = {},
+    rules,
+  }) => {
     const options = {
       rules: rules || customProps.rules,
     };
@@ -120,7 +125,10 @@ class WrapFormItem extends Component {
         <FormItem>
           <Row gutter={8}>
             <Col span={16}>
-              {getFieldDecorator(name, options)(<Input {...customProps} {...inputProps} />)}
+              {getFieldDecorator(
+                name,
+                options
+              )(<Input {...customProps} {...inputProps} />)}
             </Col>
             <Col span={8}>
               <Button
@@ -129,7 +137,9 @@ class WrapFormItem extends Component {
                 size="large"
                 onClick={this.onGetCaptcha}
               >
-                {count ? `${count} ${getCaptchaSecondText}` : getCaptchaButtonText}
+                {count
+                  ? `${count} ${getCaptchaSecondText}`
+                  : getCaptchaButtonText}
               </Button>
             </Col>
           </Row>
@@ -139,7 +149,10 @@ class WrapFormItem extends Component {
 
     return (
       <FormItem>
-        {getFieldDecorator(name, options)(<Input {...customProps} {...otherProps} />)}
+        {getFieldDecorator(
+          name,
+          options
+        )(<Input {...customProps} {...otherProps} />)}
       </FormItem>
     );
   }

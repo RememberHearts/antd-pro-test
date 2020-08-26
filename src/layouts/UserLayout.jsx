@@ -1,9 +1,12 @@
-import { DefaultFooter, getMenuData, getPageTitle } from '@ant-design/pro-layout';
+import {
+  DefaultFooter,
+  getMenuData,
+  getPageTitle,
+} from '@ant-design/pro-layout';
 import { Helmet } from 'react-helmet';
-import { Link } from 'umi';
+import { Link, connect, formatMessage } from 'umi';
 import React from 'react';
-import { connect } from 'dva';
-import { formatMessage } from 'umi-plugin-react/locale';
+
 import SelectLang from '@/components/SelectLang';
 import logo from '../assets/logo.svg';
 import styles from './UserLayout.less';
@@ -47,7 +50,9 @@ const UserLayout = props => {
                 <span className={styles.title}>Ant Design</span>
               </Link>
             </div>
-            <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+            <div className={styles.desc}>
+              Ant Design 是西湖区最具影响力的 Web 设计规范
+            </div>
           </div>
           {children}
         </div>

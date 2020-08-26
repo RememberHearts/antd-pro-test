@@ -1,7 +1,8 @@
 export default {
   'user-login.login.userName': '用户名',
   'user-login.login.password': '密码',
-  'user-login.login.message-invalid-credentials': '账户或密码错误（admin/ant.design）',
+  'user-login.login.message-invalid-credentials':
+    '账户或密码错误（admin/ant.design）',
   'user-login.login.message-invalid-verification-code': '验证码错误',
   'user-login.login.tab-login-credentials': '账户密码登录',
   'user-login.login.tab-login-mobile': '手机号登录',
@@ -23,7 +24,8 @@ export default {
   'user-login.userName.required': '请输入用户名!',
   'user-login.password.required': '请输入密码！',
   'user-login.password.twice': '两次输入的密码不匹配!',
-  'user-login.strength.msg': '请至少输入 6 个字符。请不要使用容易被猜到的密码。',
+  'user-login.strength.msg':
+    '请至少输入 6 个字符。请不要使用容易被猜到的密码。',
   'user-login.strength.strong': '强度：强',
   'user-login.strength.medium': '强度：中',
   'user-login.strength.short': '强度：太短',
@@ -56,7 +58,8 @@ export default {
   'user-login.standard.placeholder': '请输入衡量标准',
   'user-login.client.label': '客户',
   'user-login.label.tooltip': '目标的服务对象',
-  'user-login.client.placeholder': '请描述你服务的客户，内部客户直接 @姓名／工号',
+  'user-login.client.placeholder':
+    '请描述你服务的客户，内部客户直接 @姓名／工号',
   'user-login.invites.label': '邀评人',
   'user-login.invites.placeholder': '请直接 @姓名／工号，最多可邀请 5 人',
   'user-login.weight.label': '权重',

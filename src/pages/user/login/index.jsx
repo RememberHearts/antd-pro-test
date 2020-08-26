@@ -1,8 +1,7 @@
 import { Alert, Checkbox, Icon } from 'antd';
-import { FormattedMessage, formatMessage } from 'umi-plugin-react/locale';
+import { FormattedMessage, formatMessage, Link, connect } from 'umi';
 import React, { Component } from 'react';
-import { Link } from 'umi';
-import { connect } from 'dva';
+
 import LoginComponents from './components/Login';
 import styles from './style.less';
 
@@ -102,7 +101,7 @@ class Login extends Component {
               this.renderMessage(
                 formatMessage({
                   id: 'user-login.login.message-invalid-credentials',
-                }),
+                })
               )}
             <UserName
               name="userName"
@@ -152,7 +151,7 @@ class Login extends Component {
               this.renderMessage(
                 formatMessage({
                   id: 'user-login.login.message-invalid-verification-code',
-                }),
+                })
               )}
             <Mobile
               name="mobile"
@@ -215,9 +214,21 @@ class Login extends Component {
           </Submit>
           <div className={styles.other}>
             <FormattedMessage id="user-login.login.sign-in-with" />
-            <Icon type="alipay-circle" className={styles.icon} theme="outlined" />
-            <Icon type="taobao-circle" className={styles.icon} theme="outlined" />
-            <Icon type="weibo-circle" className={styles.icon} theme="outlined" />
+            <Icon
+              type="alipay-circle"
+              className={styles.icon}
+              theme="outlined"
+            />
+            <Icon
+              type="taobao-circle"
+              className={styles.icon}
+              theme="outlined"
+            />
+            <Icon
+              type="weibo-circle"
+              className={styles.icon}
+              theme="outlined"
+            />
             <Link className={styles.register} to="/user/register">
               <FormattedMessage id="user-login.login.signup" />
             </Link>

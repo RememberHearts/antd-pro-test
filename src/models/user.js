@@ -31,7 +31,7 @@ const UserModel = {
       state = {
         currentUser: {},
       },
-      action,
+      action
     ) {
       return {
         ...state,
